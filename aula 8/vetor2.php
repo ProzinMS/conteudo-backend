@@ -1,60 +1,48 @@
-<h2>Array - Vetor</h2>
+<h2>Vetor indexado por texto</h2>
+
 <p>
-    Vetores são estruturas de dados
-    unidimensionais "variáveis compostas", que
-    permitem o armazenamento de mais de 1 valor.
-    Para acessar os valores armazenados em um vetor
-    é necessário informar o índice (key).
+Os vetores podem usar textos para indexar (identificar) os valores armazenados.
+Exemplo:
+
+<pre>
+        +------------+
+    Nome|Ivan        |
+        +------------+
+   Nota1|9           |
+        +------------+
+   Nota2|7           |    
+        +------------+
+</pre>       
 </p>
 
-<strong>Aparência de um Vetor</strong>
-<pre>
-     +-----------+
-    0|Maça       |
-     +-----------+
-    1|Uva        |
-     +-----------+
-    2|Pera       |
-     +-----------+
-    3|Laranja    |
-     +-----------+
-</pre>
-<strong>Como criar um vetor</strong>
-<pre>
-    //opção 1
-    $variavel = ["Maça", "Uva", "Pera", "Laranja"];
 
-    //opção 2
-    $variavel = array("Maça", "Uva", "Pera", "Laranja");
-
-    //opção 3
-    $variavel = [];
-    $variavel[0] = "Maça";
-    $variavel[1] = "Uva";
-    $variavel[2] = "Pera";
-    $variavel[3] = "Laranja";
-</pre>
 
 <?php
 
-    $variavel = ["Maça", "uva", "pera", "Laranja"];
-    var_dump($variavel);
 
-    echo "<p>&nbsp;</p>";
-    echo $variavel[0] . "<br>";
-    echo $variavel[1] . "<br>";
-    echo $variavel[2] . "<br>";
-    echo $variavel[3] . "<br>";
+$alunos = 
+[
+    "nome" => "Robson",
+    "nota1"=> 9,
+    "nota2"=> 7
+];
 
-    for($i = 0; $i <=3; $i++){
-        echo $variavel[$i] . "<br>";
-    }
 
-    //vetor de notas
-    $notas = array(5,6,8);
-    //como calcular a média de notas do vetor?
-    $media = $variavel[$i]/4
-    //imprimir media
-    echo $media
-     
+$alunos ["notaTotal"] = ($alunos["nota1"] + $alunos["nota2"] );
+
+var_dump($alunos);
+
+echo "<p>&nbsp;</p><pre>";
+
+//imprimir todos os valores de um vetor
+//utilizando o foreach
+
+
+foreach ($alunos as $key => $value){
+    printf("%23s\n", "+------------+");
+    printf("%9s| %9s  | \n", $key, $value);
+}
+
+
 ?>
+</pre>
