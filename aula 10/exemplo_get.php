@@ -1,8 +1,8 @@
-<h1>Request Method : Get</h1>
+<h1> Redsquest Method : GET</h1>
 
 <?php
 
-$resposta = $_GET["n1"] + $_GET["n2"];
+$resposta = $_GET['n1'] + $_GET['n2'];
 echo $resposta;
 
 ?>
