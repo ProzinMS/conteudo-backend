@@ -4,7 +4,7 @@
    require_once "conexao.php";
 
    //verificar  se foi enviada o param o id
-   if(insert($_GET['id']))
+   if(insert($_GET['id'])){
 
    $id = $_GET['id'];
 
