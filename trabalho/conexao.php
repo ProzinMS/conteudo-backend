@@ -4,7 +4,7 @@ $host = "127.0.0.1";
 $port = "3306";
 $user = "root";
 $password = "";
-$database = "db_catalogo_3infoa";
+$database = "db_catalogo_3infob";
 
 //faz a conexão do PHP com o MySQL
 $conexao = new mysqli($host, 

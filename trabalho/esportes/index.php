@@ -3,11 +3,11 @@
 <?php require_once "../template/cabecalho.php";  ?>
 
   <div class="container">
-        <h1>Produtos</h1>
+        <h1>Eventos Esportivos</h1>
         <hr>
         <div class="text-end">
             <a href="form.php" class="btn btn-success">
-                Inserir produto
+                Inserir $esporte
             </a>
         </div>
 
@@ -15,25 +15,24 @@
         <thead>
             <tr>
                 <th scope="col">Nome</th>
-                <th scope="col">Preço</th>
-                <th scope="col">Foto</th>
-                <th scope="col width="25%"">Ações</th>
+                <th scope="col">Esporte</th>
+                <th scope="col">Data</th>
+                <th scope="col">Local</th>
+                <th scope="col width="25%">Ações</th>
             </tr>
         </thead>
         <tbody>
 
-        <?php foreach($produtos as $produto){ ?>
+        <?php foreach($espotes as $esporte){ ?>
             <tr>
-                <th scope="row"><?php echo $produto['nome']; ?></th>
-                <td><?php echo $produto['preco']; ?></td>
+                <th scope="row"><?php echo $esporte['nome']; ?></th>
+                <td><?php echo $esporte['data']; ?></td>
                 <td>
-                  <img 
-                      src="../uploads/<?php echo $produto['foto']; ?>" 
-                      height="30px" alt="">
+                
               </td>
                 <td class="text-end">
-                  <a href="excluir.php?id=<?php echo $produto['idproduto']; ?>" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i> Excluir</a>
-                  <a href="form.php?id=<?php echo $produto['idproduto']; ?>" class="btn btn-primary"><i class="fa-regular fa-pen-to-square"></i> Atualizar</a>
+                  <a href="excluir.php?id=<?php echo $esporte['idesporte']; ?>" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i> Excluir</a>
+                  <a href="form.php?id=<?php echo $esporte['idesporte']; ?>" class="btn btn-primary"><i class="fa-regular fa-pen-to-square"></i> Atualizar</a>
                 </td>
             </tr>
         <?php } ?>

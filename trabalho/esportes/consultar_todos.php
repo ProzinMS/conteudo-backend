@@ -3,13 +3,13 @@
 require_once "../conexao.php";
 
 //String com o comando SQL para ser executado no DB
-$sql = "SELECT * FROM `produto` where categoria like ?";
+$sql = "SELECT * FROM `esporte` where esporte like ?";
 
 //Prepara o SQL para ser executado no banco de dados
 $comando = $conexao->prepare($sql);
 
-$categoria = '%'.$_GET['categoria'].'%' ?? "%%";
-$comando->bind_param("s", $categoria);
+$esporte = '%'.$_GET['esporte'].'%' ?? "%%";
+$comando->bind_param("s", $esporte);
 
 //executa o SQL - Comando no Banco de Dados
 $comando->execute();
@@ -18,10 +18,10 @@ $comando->execute();
 $resultado = $comando->get_result();
 
 //cria um vetor vazio
-$produtos = [];
+$esportes = [];
 
 //pega a todas as linha do resultado
-while($produto = $resultado->fetch_assoc()){
+while($esporte = $resultado->fetch_assoc()){
     //adiciona o produto (linha do resultado) no vetor
-    $produtos[] = $produto;
+    $esportes[] = $esporte;
 }
